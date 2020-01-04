@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  docker-tags:
+    image: leonyork/docker-tags:${IMAGE_TAG}
+    build:
+      context: .
+      args:
+        - "CURL_VERSION=${CURL_VERSION}"
